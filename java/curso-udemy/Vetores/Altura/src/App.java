@@ -13,7 +13,7 @@ public class App {
         double[] altura = new double[n];
 
         for(int i = 0; i < n; i++){
-            System.out.println("Dodas da " + (i+1) + "a pessoa: ");
+            System.out.println("Dados da " + (i+1) + "a pessoa: ");
             System.out.print("nome: ");
             nomes[i] = sc.next();
             System.out.print("idade: ");
@@ -40,6 +40,12 @@ public class App {
         double porcent = cont * 100 / n;
         System.out.printf("Pessoas com menos de 16 anos: %.1f%%%n", porcent);
 
+
+        for(int i = 0; i < n; i++){
+            if(idades[i] < 16){
+                System.out.println(nomes[i]);
+            }
+        }
         sc.close();
     }
 
